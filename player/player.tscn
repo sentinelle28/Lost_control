@@ -1,13 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://c61ua1yxhblfx"]
+[gd_scene load_steps=11 format=3 uid="uid://c61ua1yxhblfx"]
+
+[ext_resource type="Texture2D" uid="uid://cyeuvs2xlbvoo" path="res://asset/player_asset/idle/base_caracter.png" id="1_66rfd"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_kjlmx"]
+[ext_resource type="Texture2D" uid="uid://d1jm7uvlqa1y5" path="res://asset/player_asset/move_left/move_left.png" id="2_fsplc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_162tb"]
+size = Vector2(39, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua412"]
+atlas = ExtResource("2_fsplc")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbcbh"]
+atlas = ExtResource("2_fsplc")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfayy"]
+atlas = ExtResource("2_fsplc")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga05n"]
+atlas = ExtResource("2_fsplc")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6nmy"]
+atlas = ExtResource("2_fsplc")
+region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f0myi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_66rfd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua412")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbcbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfayy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga05n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6nmy")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody2D"]
+script = ExtResource("1_kjlmx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_162tb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f0myi")
+animation = &"move"
