@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var coyete_time = 0.1
+@onready var animtree = $AnimationTree
 
 const SPEED = 300
 const JUMP_VELOCITY = -400.0
@@ -12,6 +13,7 @@ var last_direction = 1
 func _process(delta):
 	check_input()
 	apply_gravity(delta)
+	move_and_slide()
 
 func vertical_input():
 	"""
@@ -46,6 +48,7 @@ func horizontal_input():
 	var direction
 	if PlayerInputAutoload.input["move_left"].is_usable:
 		direction = Input.get_axis("move_left","move_right")
+		animtree["parameters/BlendSpace1D/blend_position"] = direction
 	else:
 		direction = 0
 	set_direction(direction)
