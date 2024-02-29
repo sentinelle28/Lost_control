@@ -6,8 +6,9 @@ extends CharacterBody2D
 const SPEED = 300
 const JUMP_VELOCITY = -400.0
 
+var air_direction = 0
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var last_direction = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -37,20 +38,24 @@ func apply_gravity(delta):
 		float: delta the current fraction of second
 	
 	"""
-	if not is_on_floor():
+	if is_on_floor():
+		air_direction = 0
+		coyete_time = 0.1
+	else:
+		air_direction = 1
+		
 		if coyete_time > 0:
 			coyete_time -= delta
 		velocity.y += gravity * delta
-	else:
-		coyete_time = 0.1
+		
 		
 func horizontal_input():
 	var direction
 	if PlayerInputAutoload.input["move_left"].is_usable:
 		direction = Input.get_axis("move_left","move_right")
-		animtree["parameters/BlendSpace1D/blend_position"] = direction
 	else:
 		direction = 0
+	animtree["parameters/BlendSpace2D/blend_position"] = Vector2(direction,air_direction)
 	set_direction(direction)
 	
 	if direction != 0:
