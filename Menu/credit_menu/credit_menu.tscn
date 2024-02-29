@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5pt5847gpu3o"]
+
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="1_kjqh3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_me3wj"]
+font = ExtResource("1_kjqh3")
+
+[node name="CreditMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 56.0
+offset_right = -120.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VScrollBar" type="VScrollBar" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Thanks to  Khurasan for the font"
+label_settings = SubResource("LabelSettings_me3wj")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://50eau6ua1tia"]
+
+[ext_resource type="PackedScene" uid="uid://bvc0ym118tgco" path="res://scene_component/Levelloader.tscn" id="1_a7h3r"]
+
+[node name="LevelSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 103.0
+offset_top = 50.0
+offset_right = -103.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoBack" parent="Panel/VBoxContainer" instance=ExtResource("1_a7h3r")]
+layout_mode = 2
+text = "Go back to the main menu"
+level_to_load = "res://Menu/Main_menu/main_menu.tscn"
+
+[node name="TutorialButton" parent="Panel/VBoxContainer" instance=ExtResource("1_a7h3r")]
+layout_mode = 2
+text = "Play tutorial"

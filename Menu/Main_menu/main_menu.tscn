@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3w536rnab1dq"]
+
+[ext_resource type="Script" path="res://Menu/Main_menu/main_menu.gd" id="1_dsijk"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="2_cjlbc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cdtd5"]
+font = ExtResource("2_cjlbc")
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_2v0lp"]
+default_font = ExtResource("2_cjlbc")
+
+[sub_resource type="Theme" id="Theme_aqwer"]
+default_font = ExtResource("2_cjlbc")
+
+[sub_resource type="Theme" id="Theme_j5b5t"]
+default_font = ExtResource("2_cjlbc")
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_dsijk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 226.0
+offset_top = 106.0
+offset_right = 927.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = -26.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Lost control"
+label_settings = SubResource("LabelSettings_cdtd5")
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_2v0lp")
+text = "Play game"
+
+[node name="CreditButton" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_aqwer")
+text = "Credit"
+
+[node name="QuitButton" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_j5b5t")
+text = "Quit"
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/CreditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
