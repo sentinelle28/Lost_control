@@ -6,4 +6,5 @@ extends Button
 
 
 func _on_pressed():
+	Inputprinter.show()
 	get_tree().change_scene_to_file(level_to_load)

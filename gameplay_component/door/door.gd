@@ -5,10 +5,11 @@ var is_player_in = false
 
 
 func _input(event):
-	if event.as_text() == "enter":
+	if event.as_text() == "Enter" and is_player_in:
 		if current_level != 0:
-			if current_level+1 in LevelUnlock:
+			if current_level+1 in LevelUnlock.level:
 				LevelUnlock.level[current_level+1] = true
+			Inputprinter.hide()
 			get_tree().change_scene_to_file("res://Menu/level_selector/level_selector.tscn")
 		else:
 			get_tree().change_scene_to_file("res://level/true_tutoriel.tscn")
@@ -19,10 +20,12 @@ func _input(event):
 func _on_body_entered(body):
 	if "player" in body.name:
 		$Label.show()
+		is_player_in = true
 		
 
 
 func _on_body_exited(body):
 	if "player" in body.name:
 		$Label.hide()
+		is_player_in = false
 		

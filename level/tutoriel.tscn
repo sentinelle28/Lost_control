@@ -116,71 +116,6 @@ sources/0 = SubResource("TileSetAtlasSource_ywb5g")
 [sub_resource type="LabelSettings" id="LabelSettings_ptx2m"]
 font = ExtResource("7_aoxb7")
 
-[sub_resource type="Animation" id="Animation_76hw8"]
-resource_name = "cutscene"
-length = 32.0
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("text_speaked:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(15, 32.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("text_speaked:text_to_show")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(16, 16.5, 17, 17.5, 18, 22, 22.5, 23, 23.5, 24, 24.5, 25, 29, 29.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": ["Ah!", "I am ", "I am finally able ", "I am finally able to investigate", "I am finally able to investigate this evil corporation", "They finally", "They finally let ", "They finally let me", "They finally let me investigate ", "They finally let me investigate the mysterious corporation ", "They finally let me investigate the mysterious corporation  after such ", "They finally let me investigate the mysterious corporation  after such a long time", "Time to go", "Time to go i guess"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera2D:zoom")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.4, 0.5), Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera2D:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [true, false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(746, -41), Vector2(578, 311)]
-}
-
 [sub_resource type="Animation" id="Animation_wpnf4"]
 length = 0.001
 tracks/0/type = "value"
@@ -242,6 +177,71 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(578, 311)]
+}
+
+[sub_resource type="Animation" id="Animation_76hw8"]
+resource_name = "cutscene"
+length = 32.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("text_speaked:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(15, 32.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("text_speaked:text_to_show")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(16, 16.5, 17, 17.5, 18, 22, 22.5, 23, 23.5, 24, 24.5, 25, 29, 29.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ah!", "I am ", "I am finally able ", "I am finally able to investigate", "I am finally able to investigate this evil corporation", "They finally", "They finally let ", "They finally let me", "They finally let me investigate ", "They finally let me investigate the mysterious corporation ", "They finally let me investigate the mysterious corporation  after such ", "They finally let me investigate the mysterious corporation  after such a long time", "Time to go", "Time to go i guess"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.5), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(746, -41), Vector2(578, 311)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b1txo"]
@@ -462,6 +462,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1179648, 196608, 0, 1179649, 196608, 0, 1179650, 196608, 0, 1179651, 196608, 0, 1179652, 196608, 0, 1179653, 196608, 0, 1179654, 196608, 0, 1179655, 196608, 0, 1179656, 196608, 0, 1179657, 196608, 0, 1179658, 196608, 0, 1179659, 196608, 0, 1179660, 196608, 0, 1179661, 196608, 0, 1179662, 196608, 0, 1179663, 196608, 0, 1179664, 196608, 0, 1179665, 196608, 0, 1179666, 196608, 0, 1179667, 196608, 0, 1179668, 196608, 0, 1179669, 196608, 0, 1179670, 196608, 0, 1179671, 196608, 0, 1179672, 196608, 0, 1179673, 196608, 0, 1179674, 196608, 0, 1179675, 196608, 0, 1179676, 196608, 0, 1179677, 196608, 0, 1179678, 196608, 0, 1179679, 196608, 0, 1179680, 196608, 0, 1179681, 196608, 0, 1179682, 196608, 0, 1179683, 196608, 0)
 
 [node name="door" parent="." instance=ExtResource("5_pdhle")]
+z_index = -1
 position = Vector2(962, 544)
 
 [node name="door_groop" type="CanvasGroup" parent="."]
@@ -550,4 +551,5 @@ offset_right = 583.0
 offset_bottom = 634.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2(578, 311)
