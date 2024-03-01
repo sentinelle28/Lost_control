@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var coyete_time = 0.1
 @onready var animtree = $AnimationTree
 
-const SPEED = 300
+const SPEED = 200
 const JUMP_VELOCITY = -400.0
 
 var air_direction = 0

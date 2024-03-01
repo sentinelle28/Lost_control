@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://pn727ixvxxj8"]
+
+[ext_resource type="Script" path="res://gameplay_component/door/door.gd" id="1_m02ne"]
+[ext_resource type="Texture2D" uid="uid://p15bjgvcn2o" path="res://asset/gameplay_asset/door.png" id="1_t72t6"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="2_pf53j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxdpn"]
+size = Vector2(52, 68)
+
+[sub_resource type="LabelSettings" id="LabelSettings_witl6"]
+font = ExtResource("2_pf53j")
+
+[node name="door" type="Area2D"]
+script = ExtResource("1_m02ne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_wxdpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t72t6")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 2
+offset_left = -114.0
+offset_top = -51.0
+offset_right = 107.0
+offset_bottom = -28.0
+text = "Press enter to proceed"
+label_settings = SubResource("LabelSettings_witl6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

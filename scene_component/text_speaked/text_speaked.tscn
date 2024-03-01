@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://8q76et7a2vl1"]
+
+[ext_resource type="Script" path="res://scene_component/text_speaked/text_speaked.gd" id="1_5exwm"]
+[ext_resource type="Texture2D" uid="uid://wrrfrvy551ll" path="res://asset/player_asset/head/head_of_the_caracter.png" id="1_peokt"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="3_vg0vi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ybebk"]
+font = ExtResource("3_vg0vi")
+
+[node name="text_speaked" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5exwm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = -73.0
+offset_right = 496.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -428.0
+offset_top = -24.5
+offset_right = 428.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_peokt")
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Text to show"
+label_settings = SubResource("LabelSettings_ybebk")
+horizontal_alignment = 1
+vertical_alignment = 1

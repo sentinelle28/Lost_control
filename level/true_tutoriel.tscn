@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2yjmn1xyta8e"]
+
+[ext_resource type="PackedScene" uid="uid://c61ua1yxhblfx" path="res://player/player.tscn" id="1_gp3vh"]
+[ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/tileset/background/background_tileset.png" id="2_1mej8"]
+[ext_resource type="PackedScene" uid="uid://pn727ixvxxj8" path="res://gameplay_component/door/door.tscn" id="2_ywgfi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bcg5p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ty6bn"]
+texture = ExtResource("2_1mej8")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_3c1r5"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_bcg5p")
+sources/1 = SubResource("TileSetAtlasSource_ty6bn")
+
+[node name="TrueTutoriel" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_gp3vh")]
+position = Vector2(56, 592)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3c1r5")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310720, 262145, 0, 1310721, 262145, 0, 1310722, 262145, 0, 1310723, 262145, 0, 1310724, 262145, 0, 1310725, 262145, 0, 1310726, 262145, 0, 1310727, 262145, 0, 1310728, 262145, 0, 1310729, 262145, 0, 1310730, 262145, 0, 1310731, 262145, 0, 1310732, 262145, 0, 1310733, 262145, 0, 1310734, 262145, 0, 1310735, 262145, 0, 1310736, 262145, 0, 1310737, 262145, 0, 1310738, 262145, 0, 1310739, 262145, 0, 1310740, 262145, 0, 1310741, 262145, 0, 1310742, 262145, 0, 1310743, 262145, 0, 1310744, 262145, 0, 1310745, 262145, 0, 1310746, 262145, 0, 1310747, 262145, 0, 1310748, 262145, 0, 1310749, 262145, 0, 1310750, 262145, 0, 1310751, 262145, 0, 1310752, 262145, 0, 1310753, 262145, 0, 1310754, 262145, 0, 1310755, 262145, 0)
+
+[node name="door" parent="." instance=ExtResource("2_ywgfi")]
+position = Vector2(1077, 68)
+current_level = 1
