@@ -310,4 +310,4 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_7v7tu")
 anim_player = NodePath("../AnimationPlayer")
-parameters/BlendSpace2D/blend_position = Vector2(-1, 0.00529099)
+parameters/BlendSpace2D/blend_position = Vector2(0, -0.00529099)
