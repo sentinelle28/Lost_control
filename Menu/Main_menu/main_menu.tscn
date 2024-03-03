@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3w536rnab1dq"]
 
 [ext_resource type="Script" path="res://Menu/Main_menu/main_menu.gd" id="1_dsijk"]
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="2_cjlbc"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="2_cjlbc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cdtd5"]
 font = ExtResource("2_cjlbc")

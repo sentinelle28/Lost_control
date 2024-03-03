@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://didhoqclmsan6"]
 
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="1_3cqnk"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_3cqnk"]
 [ext_resource type="Script" path="res://Menu/paused_menu/pausedmenu.gd" id="1_4w5ur"]
 
 [sub_resource type="Theme" id="Theme_q3f53"]

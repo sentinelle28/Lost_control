@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://pn727ixvxxj8"]
 
 [ext_resource type="Script" path="res://gameplay_component/door/door.gd" id="1_m02ne"]
-[ext_resource type="Texture2D" uid="uid://p15bjgvcn2o" path="res://asset/gameplay_asset/door.png" id="1_t72t6"]
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="2_pf53j"]
+[ext_resource type="Texture2D" uid="uid://p15bjgvcn2o" path="res://asset/visual/gameplay_asset/door.png" id="1_t72t6"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="2_pf53j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxdpn"]
 size = Vector2(52, 68)

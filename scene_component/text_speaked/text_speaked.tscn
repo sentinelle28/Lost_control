@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8q76et7a2vl1"]
 
 [ext_resource type="Script" path="res://scene_component/text_speaked/text_speaked.gd" id="1_5exwm"]
-[ext_resource type="Texture2D" uid="uid://wrrfrvy551ll" path="res://asset/player_asset/head/head_of_the_caracter.png" id="1_peokt"]
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="3_vg0vi"]
+[ext_resource type="Texture2D" uid="uid://wrrfrvy551ll" path="res://asset/visual/player_asset/head/head_of_the_caracter.png" id="1_peokt"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="3_vg0vi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ybebk"]
 font = ExtResource("3_vg0vi")

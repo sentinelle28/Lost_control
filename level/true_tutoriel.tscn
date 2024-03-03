@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2yjmn1xyta8e"]
 
 [ext_resource type="PackedScene" uid="uid://c61ua1yxhblfx" path="res://player/player.tscn" id="1_gp3vh"]
-[ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/tileset/background/background_tileset.png" id="2_1mej8"]
+[ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/visual/tileset/background/background_tileset.png" id="2_1mej8"]
 [ext_resource type="PackedScene" uid="uid://pn727ixvxxj8" path="res://gameplay_component/door/door.tscn" id="2_ywgfi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bcg5p"]

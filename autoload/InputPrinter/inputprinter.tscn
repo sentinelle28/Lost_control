@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbafphyj0p6u8"]
 
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="1_oenva"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_oenva"]
 [ext_resource type="Script" path="res://autoload/InputPrinter/InputPrinter.gd" id="1_s7g6f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eifsu"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5pt5847gpu3o"]
 
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="1_kjqh3"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_kjqh3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_me3wj"]
 font = ExtResource("1_kjqh3")

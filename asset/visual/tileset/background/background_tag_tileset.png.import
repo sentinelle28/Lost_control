@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1jm7uvlqa1y5"
-path="res://.godot/imported/move_left.png-d93f1259ee5656d03c69b48acd16a8fe.ctex"
+uid="uid://dcvypb18uga41"
+path="res://.godot/imported/background_tag_tileset.png-7c714e8e0da4cda40f0b29ebdba07b54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/player_asset/move_left/move_left.png"
-dest_files=["res://.godot/imported/move_left.png-d93f1259ee5656d03c69b48acd16a8fe.ctex"]
+source_file="res://asset/visual/tileset/background/background_tag_tileset.png"
+dest_files=["res://.godot/imported/background_tag_tileset.png-7c714e8e0da4cda40f0b29ebdba07b54.ctex"]
 
 [params]
 

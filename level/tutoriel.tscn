@@ -1,13 +1,13 @@
 [gd_scene load_steps=25 format=3 uid="uid://d11e6b40dugta"]
 
 [ext_resource type="PackedScene" uid="uid://c61ua1yxhblfx" path="res://player/player.tscn" id="1_6h0mv"]
-[ext_resource type="Texture2D" uid="uid://dhmtgvimme1xj" path="res://asset/background_element/stars.png" id="1_tvk26"]
+[ext_resource type="Texture2D" uid="uid://dhmtgvimme1xj" path="res://asset/visual/background_element/stars.png" id="1_tvk26"]
 [ext_resource type="Script" path="res://level/tutoriel.gd" id="1_xcm7n"]
-[ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/tileset/background/background_tileset.png" id="2_kgwft"]
-[ext_resource type="Texture2D" uid="uid://dcvypb18uga41" path="res://asset/tileset/background/background_tag_tileset.png" id="3_4mpac"]
+[ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/visual/tileset/background/background_tileset.png" id="2_kgwft"]
+[ext_resource type="Texture2D" uid="uid://dcvypb18uga41" path="res://asset/visual/tileset/background/background_tag_tileset.png" id="3_4mpac"]
 [ext_resource type="PackedScene" uid="uid://pn727ixvxxj8" path="res://gameplay_component/door/door.tscn" id="5_pdhle"]
-[ext_resource type="Texture2D" uid="uid://p15bjgvcn2o" path="res://asset/gameplay_asset/door.png" id="6_f0o1h"]
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="7_aoxb7"]
+[ext_resource type="Texture2D" uid="uid://p15bjgvcn2o" path="res://asset/visual/gameplay_asset/door.png" id="6_f0o1h"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="7_aoxb7"]
 [ext_resource type="Script" path="res://class/plot_related_class/Cutscene.gd" id="8_r65e5"]
 [ext_resource type="PackedScene" uid="uid://8q76et7a2vl1" path="res://scene_component/text_speaked/text_speaked.tscn" id="9_h7c0u"]
 

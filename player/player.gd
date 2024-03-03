@@ -24,9 +24,12 @@ func vertical_input():
 			
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
+			$jump_sound_effect.play()
 		elif coyete_time > 0:
 			coyete_time = 0
 			velocity.y = JUMP_VELOCITY
+			$jump_sound_effect.play()
+			
 			
 	
 	if Input.is_action_just_released("jump"):

@@ -1,10 +1,12 @@
-[gd_scene load_steps=34 format=3 uid="uid://c61ua1yxhblfx"]
+[gd_scene load_steps=36 format=3 uid="uid://c61ua1yxhblfx"]
 
-[ext_resource type="Texture2D" uid="uid://cyeuvs2xlbvoo" path="res://asset/player_asset/idle/base_caracter.png" id="1_66rfd"]
+[ext_resource type="Texture2D" uid="uid://cyeuvs2xlbvoo" path="res://asset/visual/player_asset/idle/base_caracter.png" id="1_66rfd"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_kjlmx"]
-[ext_resource type="Texture2D" uid="uid://d1jm7uvlqa1y5" path="res://asset/player_asset/move_left/move_left.png" id="2_fsplc"]
-[ext_resource type="Texture2D" uid="uid://cmt8gv6l6fi5h" path="res://asset/player_asset/idle/idle_spritesheet.png" id="3_qq2yp"]
-[ext_resource type="Texture2D" uid="uid://dx3jtahc8m12b" path="res://asset/player_asset/jump/jump.png" id="4_eiq7y"]
+[ext_resource type="Texture2D" uid="uid://d1jm7uvlqa1y5" path="res://asset/visual/player_asset/move_left/move_left.png" id="2_fsplc"]
+[ext_resource type="Texture2D" uid="uid://cmt8gv6l6fi5h" path="res://asset/visual/player_asset/idle/idle_spritesheet.png" id="3_qq2yp"]
+[ext_resource type="Texture2D" uid="uid://dx3jtahc8m12b" path="res://asset/visual/player_asset/jump/jump.png" id="4_eiq7y"]
+[ext_resource type="AudioStream" uid="uid://dtjkydpitc51i" path="res://asset/audio/player/jump/jump_sound_effect.wav" id="6_6i1bi"]
+[ext_resource type="AudioStream" uid="uid://c6enwexedivwd" path="res://asset/audio/player/walk_sound/walk_sound.wav" id="6_ru77u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_162tb"]
 size = Vector2(39, 92)
@@ -159,6 +161,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("walksound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_jettu"]
 resource_name = "idle"
@@ -191,7 +205,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_5j3vi"]
 resource_name = "jump"
-length = 0.05
+length = 0.1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -245,6 +259,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("walksound:stream")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_ru77u")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("walksound:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tvf6m"]
@@ -311,3 +349,11 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_7v7tu")
 anim_player = NodePath("../AnimationPlayer")
 parameters/BlendSpace2D/blend_position = Vector2(0, -0.00529099)
+
+[node name="walksound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ru77u")
+pitch_scale = 0.52
+
+[node name="jump_sound_effect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6i1bi")
+mix_target = 2

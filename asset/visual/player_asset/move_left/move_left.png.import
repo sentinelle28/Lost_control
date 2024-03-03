@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wrrfrvy551ll"
-path="res://.godot/imported/head_of_the_caracter.png-8733128dfec31b2d39c6311663d614c5.ctex"
+uid="uid://d1jm7uvlqa1y5"
+path="res://.godot/imported/move_left.png-578e681a08556c0ce6919d473f4f0c06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/player_asset/head/head_of_the_caracter.png"
-dest_files=["res://.godot/imported/head_of_the_caracter.png-8733128dfec31b2d39c6311663d614c5.ctex"]
+source_file="res://asset/visual/player_asset/move_left/move_left.png"
+dest_files=["res://.godot/imported/move_left.png-578e681a08556c0ce6919d473f4f0c06.ctex"]
 
 [params]
 

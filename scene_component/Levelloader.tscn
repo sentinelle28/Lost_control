@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvc0ym118tgco"]
 
-[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/font/Boohong.otf" id="1_jegdh"]
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_jegdh"]
 [ext_resource type="Script" path="res://scene_component/Levelloader.gd" id="2_wl4a0"]
 
 [sub_resource type="Theme" id="Theme_fxpjr"]

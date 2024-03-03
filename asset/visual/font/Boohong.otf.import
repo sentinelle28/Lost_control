@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d2qsbiia2afr7"
-path="res://.godot/imported/Boohong.otf-a818bf224e6fa5e895b532d09343e49d.fontdata"
+path="res://.godot/imported/Boohong.otf-15984dc4819d8d68714fafa2ff7dd94d.fontdata"
 
 [deps]
 
-source_file="res://asset/font/Boohong.otf"
-dest_files=["res://.godot/imported/Boohong.otf-a818bf224e6fa5e895b532d09343e49d.fontdata"]
+source_file="res://asset/visual/font/Boohong.otf"
+dest_files=["res://.godot/imported/Boohong.otf-15984dc4819d8d68714fafa2ff7dd94d.fontdata"]
 
 [params]
 
