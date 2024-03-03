@@ -21,6 +21,7 @@ PlayerInputAutoload="*res://autoload/PlayerInputAutoload.gd"
 LevelUnlock="*res://autoload/LevelUnlock.gd"
 ListOfPossibleInput="*res://autoload/ListOfPossibleInput.gd"
 Inputprinter="*res://autoload/InputPrinter/inputprinter.tscn"
+Pausedmenu="*res://Menu/paused_menu/pausedmenu.tscn"
 
 [input]
 

@@ -72,3 +72,10 @@ func set_direction(direction):
 func check_input():
 	horizontal_input()
 	vertical_input()
+	paused_button()
+
+func paused_button():
+	if Input.is_action_just_pressed("pause_button"):
+		get_tree().current_scene.hide()
+		Pausedmenu.show()
+		get_tree().paused = true
