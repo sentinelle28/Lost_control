@@ -2,17 +2,17 @@ extends Area2D
 
 var is_player_in = false
 @export var current_level = 0
-
+@export var level_to_unlock = 1
+@export var scene_to_load:String ="res://Menu/level_selector/level_selector.tscn"
 
 func _input(event):
 	if event.as_text() == "Enter" and is_player_in:
-		if current_level != 0:
-			if current_level+1 in LevelUnlock.level:
-				LevelUnlock.level[current_level+1] = true
+		if current_level != level_to_unlock:
+			LevelUnlock.level[level_to_unlock] = true
 			Inputprinter.hide()
-			get_tree().change_scene_to_file("res://Menu/level_selector/level_selector.tscn")
+			get_tree().change_scene_to_file(scene_to_load)
 		else:
-			get_tree().change_scene_to_file("res://level/true_tutoriel.tscn")
+			get_tree().change_scene_to_file(scene_to_load)
 
 
 

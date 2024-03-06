@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=3 uid="uid://1etl20bj5yb8"]
+
+[ext_resource type="PackedScene" uid="uid://c2yjmn1xyta8e" path="res://level/true_tutoriel.tscn" id="1_snjy1"]
+[ext_resource type="Script" path="res://level/first_level/change_input.gd" id="2_isnjm"]
+[ext_resource type="Script" path="res://class/plot_related_class/Cutscene.gd" id="3_084tt"]
+[ext_resource type="PackedScene" uid="uid://di03vuwj7mfpc" path="res://scene_component/cutscene_trigger/autostart.tscn" id="4_ehsqj"]
+[ext_resource type="PackedScene" uid="uid://8q76et7a2vl1" path="res://scene_component/text_speaked/text_speaked.tscn" id="5_1p2k8"]
+
+[sub_resource type="Animation" id="Animation_eknuq"]
+resource_name = "cutscene"
+length = 6.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("text_speaked:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("text_speaked:text_to_show")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 2.5, 3, 3.5, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["what", "what is happening", "what is happening!!!!!", "why i am", "why i am feeling ", "why i am feeling weird", "No It", "No It be an", "No It be an illusion"]
+}
+
+[sub_resource type="Animation" id="Animation_62dcn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("text_speaked:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("text_speaked:text_to_show")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_it4d3"]
+_data = {
+"RESET": SubResource("Animation_62dcn"),
+"cutscene": SubResource("Animation_eknuq")
+}
+
+[node name="level_1" instance=ExtResource("1_snjy1")]
+
+[node name="player" parent="." index="0"]
+position = Vector2(64, 592)
+
+[node name="door" parent="." index="1"]
+position = Vector2(1086, 64)
+current_level = 1
+level_to_unlock = 2
+
+[node name="first_tilemap" parent="level_tilemap" index="0"]
+layer_0/tile_data = PackedInt32Array(1310720, 65537, 0, 1310721, 65537, 0, 1310722, 65537, 0, 1310723, 65537, 0, 1310724, 65537, 0, 1310725, 65537, 0, 1310726, 65537, 0, 1310727, 65537, 0, 1310728, 65537, 0, 1310729, 65537, 0, 1310730, 65537, 0, 1310731, 65537, 0, 1310732, 65537, 0, 1310733, 65537, 0, 1310734, 65537, 0, 1310735, 65537, 0, 1310736, 65537, 0, 1310737, 65537, 0, 1310738, 65537, 0, 1310739, 65537, 0, 1310740, 65537, 0, 1310741, 65537, 0, 1310742, 65537, 0, 1310743, 65537, 0, 1310744, 65537, 0, 1310745, 65537, 0, 1310746, 65537, 0, 1310747, 65537, 0, 1310748, 65537, 0, 1310749, 65537, 0, 1310750, 65537, 0, 1310751, 65537, 0, 1310752, 65537, 0, 1310753, 65537, 0, 1310754, 65537, 0, 1310755, 65537, 0, 0, 65537, 0, 65536, 65537, 0, 131072, 65537, 0, 196608, 65537, 0, 262144, 65537, 0, 327680, 65537, 0, 393216, 65537, 0, 458752, 65537, 0, 524288, 65537, 0, 589824, 65537, 0, 655360, 65537, 0, 720896, 65537, 0, 786432, 65537, 0, 851968, 65537, 0, 917504, 65537, 0, 983040, 65537, 0, 1048576, 65537, 0, 1114112, 65537, 0, 1179648, 65537, 0, 1245184, 65537, 0, 1, 65537, 0, 2, 65537, 0, 3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, 7, 65537, 0, 8, 65537, 0, 9, 65537, 0, 10, 65537, 0, 11, 65537, 0, 12, 65537, 0, 13, 65537, 0, 14, 65537, 0, 15, 65537, 0, 16, 65537, 0, 17, 65537, 0, 35, 65537, 0, 65571, 65537, 0, 131107, 65537, 0, 196643, 65537, 0, 262179, 65537, 0, 327715, 65537, 0, 393251, 65537, 0, 458787, 65537, 0, 524323, 65537, 0, 589859, 65537, 0, 655395, 65537, 0, 720931, 65537, 0, 786467, 65537, 0, 852003, 65537, 0, 917539, 65537, 0, 983075, 65537, 0, 1048611, 65537, 0, 1114147, 65537, 0, 1179683, 65537, 0, 1245219, 65537, 0, 393234, 65537, 0, 720916, 65537, 0, 720915, 65537, 0, 720914, 65537, 0, 458757, 65537, 0, 1245187, 65537, 0, 1179652, 65537, 0, 1114117, 65537, 0, 1048583, 65537, 0, 1048582, 65537, 0, 1048585, 65537, 0, 1048584, 65537, 0, 1048586, 65537, 0, 1048587, 65537, 0, 1048588, 65537, 0, 1048589, 65537, 0, 1048590, 65537, 0, 1048591, 65537, 0, 1048592, 65537, 0, 1048593, 65537, 0, 1114130, 65537, 0, 1179667, 65537, 0, 1245204, 65537, 0, 1048598, 65537, 0, 1048599, 65537, 0, 1048600, 65537, 0, 1114135, 65537, 0, 1179671, 65537, 0, 1245207, 65537, 0, 1048601, 65537, 0, 1048602, 65537, 0, 1048603, 65537, 0, 1048604, 65537, 0, 1048605, 65537, 0, 1048606, 65537, 0, 1048607, 65537, 0, 1048608, 65537, 0, 1048609, 65537, 0, 1048610, 65537, 0, 852000, 65537, 0, 852002, 65537, 0, 655388, 65537, 0, 786465, 65537, 0, 786466, 65537, 0, 720930, 65537, 0, 720913, 65537, 0, 720912, 65537, 0, 720905, 65537, 0, 720900, 65537, 0, 720899, 65537, 0, 720901, 65537, 0, 720904, 65537, 0, 720906, 65537, 0, 917532, 1, 1, 983068, 1, 1, 983074, 65537, 0, 917538, 65537, 0, 983064, 1, 1, 655389, 65537, 0, 917536, 65537, 0, 852001, 65537, 0, 983073, 65537, 0, 983072, 65537, 0, 917537, 65537, 0, 655387, 65537, 0, 393220, 1, 1, 720897, 65537, 0, 720898, 65537, 0, 655361, 65537, 0, 655362, 65537, 0, 327694, 1, 1, 720907, 65537, 0, 327699, 1, 1, 196632, 65537, 0, 196631, 65537, 0, 196633, 65537, 0, 196634, 65537, 0, 196635, 65537, 0, 196636, 65537, 0, 196637, 65537, 0, 196638, 65537, 0, 196639, 65537, 0, 196640, 65537, 0, 196641, 65537, 0, 196642, 65537, 0, -65515, 65537, 0, -65514, 65537, 0, -65513, 65537, 0, -65512, 65537, 0, -65511, 65537, 0, -65510, 65537, 0, -65509, 65537, 0, -65508, 65537, 0, -65507, 65537, 0, -65506, 65537, 0, -65505, 65537, 0, -65504, 65537, 0, -65503, 65537, 0, -65502, 65537, 0, -65501, 65537, 0, 262165, 65537, 0, 196630, 65537, 0, -65516, 65537, 0, -65517, 65537, 0, -65518, 65537, 0)
+
+[node name="second_tilemap" parent="level_tilemap" index="1"]
+layer_0/tile_data = PackedInt32Array(262145, 262144, 0, 458783, 262144, 0, 196617, 196608, 0)
+
+[node name="first_background" parent="bakground" index="0"]
+layer_0/name = "dark background"
+layer_1/name = "normal background"
+layer_1/modulate = Color(0.796078, 0.796078, 0.796078, 1)
+layer_1/tile_data = PackedInt32Array(327710, 0, 1, 524296, 65536, 0, 524297, 65536, 0, 524298, 65536, 0, 1245210, 0, 1, 1245214, 0, 1, 1245217, 0, 1, 983051, 0, 1, 983054, 0, 1, 983056, 0, 1, 983049, 0, 1, 655364, 0, 1, 655377, 0, 1, 655379, 0, 1, 589852, 0, 1, 983066, 0, 1, 983070, 0, 1, 458756, 65536, 0, 458755, 65536, 0, 1245191, 0, 1, 1245196, 0, 1, 1245201, 0, 1, 393229, 65536, 0, 393230, 65536, 0, 655369, 0, 1, 393231, 65536, 0, 393235, 65536, 0, 393236, 65536, 0, 393237, 65536, 0, 393238, 65536, 0, 393239, 65536, 0, 393240, 65536, 0, 393241, 65536, 0, 393242, 65536, 0, 393243, 65536, 0, 393244, 65536, 0, 393245, 65536, 0, 393246, 65536, 0, 393247, 65536, 0, 393248, 65536, 0, 393249, 65536, 0, 393250, 65536, 0, 327705, 0, 1, 327713, 0, 1, 327701, 65536, 0)
+
+[node name="second_background" parent="bakground" index="1"]
+layer_0/tile_data = PackedInt32Array(131092, 262144, 0, 458760, 196608, 0, 458769, 196608, 0, 458765, 131072, 0, 458764, 196608, 0, 458762, 131072, 0, 458767, 131072, 0, 589849, 131072, 0, 589853, 131072, 0, 589856, 131072, 0, 589851, 262144, 0, 589855, 196608, 0, 589858, 196608, 0, 262173, 196608, 0, 262171, 196608, 0, 458781, 196608, 0, 589833, 262144, 0, 589834, 262144, 0, 589838, 262144, 0, 589839, 262144, 0, 589842, 196608, 0, 589829, 196608, 0, 131096, 131072, 0, 131102, 131072, 0, 131105, 131072, 0, 131099, 262144, 0, 131106, 196608, 0)
+
+[node name="change_input" type="Node" parent="." index="4"]
+script = ExtResource("2_isnjm")
+
+[node name="Cutscene" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_it4d3")
+}
+script = ExtResource("3_084tt")
+
+[node name="Autostart" parent="." index="6" node_paths=PackedStringArray("cutscene") instance=ExtResource("4_ehsqj")]
+cutscene = NodePath("../Cutscene")
+
+[node name="text_speaked" parent="." index="7" instance=ExtResource("5_1p2k8")]
+visible = false
+offset_left = 568.0
+offset_top = 644.0
+offset_right = 568.0
+offset_bottom = 644.0

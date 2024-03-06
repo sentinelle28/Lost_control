@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://c61ua1yxhblfx" path="res://player/player.tscn" id="1_6h0mv"]
 [ext_resource type="Texture2D" uid="uid://dhmtgvimme1xj" path="res://asset/visual/background_element/stars.png" id="1_tvk26"]
-[ext_resource type="Script" path="res://level/tutoriel.gd" id="1_xcm7n"]
 [ext_resource type="Texture2D" uid="uid://433n4loi22jp" path="res://asset/visual/tileset/background/background_tileset.png" id="2_kgwft"]
 [ext_resource type="Texture2D" uid="uid://dcvypb18uga41" path="res://asset/visual/tileset/background/background_tag_tileset.png" id="3_4mpac"]
 [ext_resource type="PackedScene" uid="uid://pn727ixvxxj8" path="res://gameplay_component/door/door.tscn" id="5_pdhle"]
@@ -10,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="7_aoxb7"]
 [ext_resource type="Script" path="res://class/plot_related_class/Cutscene.gd" id="8_r65e5"]
 [ext_resource type="PackedScene" uid="uid://8q76et7a2vl1" path="res://scene_component/text_speaked/text_speaked.tscn" id="9_h7c0u"]
+[ext_resource type="PackedScene" uid="uid://di03vuwj7mfpc" path="res://scene_component/cutscene_trigger/autostart.tscn" id="10_qb4hr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjeln"]
 texture = ExtResource("2_kgwft")
@@ -251,7 +251,6 @@ _data = {
 }
 
 [node name="Tutoriel" type="Node2D"]
-script = ExtResource("1_xcm7n")
 
 [node name="far_background" type="CanvasLayer" parent="."]
 layer = -2
@@ -464,6 +463,8 @@ layer_0/tile_data = PackedInt32Array(1179648, 196608, 0, 1179649, 196608, 0, 117
 [node name="door" parent="." instance=ExtResource("5_pdhle")]
 z_index = -1
 position = Vector2(962, 544)
+level_to_unlock = 0
+scene_to_load = "res://level/true_tutoriel.tscn"
 
 [node name="door_groop" type="CanvasGroup" parent="."]
 z_index = -1
@@ -553,3 +554,6 @@ offset_bottom = 634.0
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
 position = Vector2(578, 311)
+
+[node name="Autostart" parent="." node_paths=PackedStringArray("cutscene") instance=ExtResource("10_qb4hr")]
+cutscene = NodePath("../Cutscene")

@@ -2,6 +2,8 @@ extends AnimationPlayer
 
 class_name Cutscene
 
+@export var skip_lenght = 0.5
+
 func _ready():
 	connect("animation_finished",on_finished)
 
@@ -17,3 +19,6 @@ func on_finished(anim_name):
 		play("RESET")
 		Inputprinter.show()
 
+func _process(_delta):
+	if is_playing() and Input.is_action_just_pressed("ui_accept"):
+		advance(skip_lenght)

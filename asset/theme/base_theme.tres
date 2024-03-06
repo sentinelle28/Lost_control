@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dhfx5g5petoxd"]
+
+[ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_j4d3p"]
+
+[resource]
+default_font = ExtResource("1_j4d3p")
