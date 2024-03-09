@@ -57,7 +57,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = SubResource("Theme_oru8b")
-text = "Reload current level"
+text = "Restart current level"
 
 [node name="option_button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhac6osen6bsm"]
+
+[ext_resource type="Script" path="res://level/third_level/third_level.gd" id="1_fyd4e"]
+
+[node name="ProgressBar" type="ProgressBar"]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 116.0
+offset_bottom = 34.0
+max_value = 15.0
+value = 15.0
+script = ExtResource("1_fyd4e")

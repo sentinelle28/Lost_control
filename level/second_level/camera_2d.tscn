@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bpadjoqtytxxy"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(575, 330)
+rotation = 3.14159
+ignore_rotation = false
+zoom = Vector2(1, 0.99)

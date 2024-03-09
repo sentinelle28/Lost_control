@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctbdqjnkoplv5"]
+
+[ext_resource type="Texture2D" uid="uid://clh7pwnaky4l" path="res://asset/visual/tileset/office/office_tileset.png" id="1_a6jw4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bcg5p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7lld"]
+texture = ExtResource("1_a6jw4")
+texture_region_size = Vector2i(32, 32)
+0:1/size_in_atlas = Vector2i(2, 1)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.75, -15.75, -31.75, -12.75, -26, -12.5, -26, 15.75, 25.5, 15.5, 25.75, -12.25, 31.5, -12.25, 31.5, -15.75)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_3c1r5"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_bcg5p")
+sources/1 = SubResource("TileSetAtlasSource_b7lld")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2gb3m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud5ju"]
+texture = ExtResource("1_a6jw4")
+texture_region_size = Vector2i(32, 64)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -27, -7, -32, 4, -27, 5, -2.5, 16, 2, 16, 13.5, 11.5, 32, -9.5, 32, -11.5, 12.5, -16, 8.5)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -27, 16, -27.5, 16, -0.5, 7.5, 32, -8, 32, -16, -1)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11, -28, 11, -27.5, 11.5, 32, -10.5, 32)
+
+[sub_resource type="TileSet" id="TileSet_vricq"]
+tile_size = Vector2i(32, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_2gb3m")
+sources/0 = SubResource("TileSetAtlasSource_ud5ju")
+
+[node name="level_tilemap2" type="Node2D"]
+
+[node name="first_tilemap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3c1r5")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310720, 65537, 0, 1310721, 65537, 0, 1310722, 65537, 0, 1310723, 65537, 0, 1310724, 65537, 0, 1310725, 65537, 0, 1310726, 65537, 0, 1310727, 65537, 0, 1310728, 65537, 0, 1310729, 65537, 0, 1310730, 65537, 0, 1310731, 65537, 0, 1310732, 65537, 0, 1310733, 65537, 0, 1310734, 65537, 0, 1310735, 65537, 0, 1310736, 65537, 0, 1310737, 65537, 0, 1310738, 65537, 0, 1310739, 65537, 0, 1310740, 65537, 0, 1310741, 65537, 0, 1310742, 65537, 0, 1310743, 65537, 0, 1310744, 65537, 0, 1310745, 65537, 0, 1310746, 65537, 0, 1310747, 65537, 0, 1310748, 65537, 0, 1310749, 65537, 0, 1310750, 65537, 0, 1310751, 65537, 0, 1310752, 65537, 0, 1310753, 65537, 0, 1310754, 65537, 0, 1310755, 65537, 0, 0, 65537, 0, 65536, 65537, 0, 131072, 65537, 0, 196608, 65537, 0, 262144, 65537, 0, 327680, 65537, 0, 393216, 65537, 0, 458752, 65537, 0, 524288, 65537, 0, 589824, 65537, 0, 655360, 65537, 0, 720896, 65537, 0, 786432, 65537, 0, 851968, 65537, 0, 917504, 65537, 0, 983040, 65537, 0, 1048576, 65537, 0, 1114112, 65537, 0, 1179648, 65537, 0, 1245184, 65537, 0, 1, 65537, 0, 2, 65537, 0, 3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, 7, 65537, 0, 8, 65537, 0, 9, 65537, 0, 10, 65537, 0, 11, 65537, 0, 12, 65537, 0, 13, 65537, 0, 14, 65537, 0, 15, 65537, 0, 16, 65537, 0, 17, 65537, 0, 18, 65537, 0, 19, 65537, 0, 20, 65537, 0, 21, 65537, 0, 22, 65537, 0, 23, 65537, 0, 24, 65537, 0, 25, 65537, 0, 26, 65537, 0, 27, 65537, 0, 28, 65537, 0, 29, 65537, 0, 30, 65537, 0, 31, 65537, 0, 32, 65537, 0, 33, 65537, 0, 34, 65537, 0, 35, 65537, 0, 65571, 65537, 0, 131107, 65537, 0, 196643, 65537, 0, 262179, 65537, 0, 327715, 65537, 0, 393251, 65537, 0, 458787, 65537, 0, 524323, 65537, 0, 589859, 65537, 0, 655395, 65537, 0, 720931, 65537, 0, 786467, 65537, 0, 852003, 65537, 0, 917539, 65537, 0, 983075, 65537, 0, 1048611, 65537, 0, 1114147, 65537, 0, 1179683, 65537, 0, 1245219, 65537, 0, 786441, 65537, 0, 786440, 65537, 0, 786439, 65537, 0, 786434, 65537, 0, 786433, 65537, 0, 1179652, 65537, 0, 1245188, 65537, 0, 1179653, 65537, 0, 1245189, 65537, 0, 917505, 65537, 0, 917506, 65537, 0, 917507, 65537, 0, 1114118, 65537, 0, 1048582, 65537, 0, 1179654, 65537, 0, 1245190, 65537, 0, 851970, 65537, 0, 851969, 65537, 0, 720897, 65537, 0, 720904, 65537, 0, 720905, 65537, 0, 655369, 65537, 0, 1048596, 65537, 0, 1048597, 65537, 0, 917531, 65537, 0, 917532, 65537, 0, 786463, 65537, 0, 786464, 65537, 0, 786465, 65537, 0, 720928, 65537, 0, 720929, 65537, 0, 655394, 65537, 0, 720930, 65537, 0, 786466, 65537, 0, 655393, 65537, 0, 589858, 65537, 0, 589857, 65537, 0, 1048595, 65537, 0, 1048594, 65537, 0, 917530, 65537, 0)
+
+[node name="second_tilemap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_vricq")
+format = 2
