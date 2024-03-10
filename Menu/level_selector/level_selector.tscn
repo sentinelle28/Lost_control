@@ -49,6 +49,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 1 "
 script = ExtResource("4_40etw")
+level_to_load = "res://level/first_level/level_1.tscn"
 
 [node name="ButtonLevel_2" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -56,6 +57,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 2"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/second_level/second_level.tscn"
 
 [node name="ButtonLevel_3" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -63,6 +65,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 3"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/third_level/third_level.tscn"
 
 [node name="ButtonLevel_4" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -70,6 +73,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 4"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/fourth_level/fourth_level.tscn"
 
 [node name="ButtonLevel_5" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -77,6 +81,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 5"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/fith_level.tscn"
 
 [node name="ButtonLevel_6" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -84,6 +89,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 6"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/six_level.tscn"
 
 [node name="ButtonLevel_7" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -91,6 +97,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 7"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/sevent_level.tscn"
 
 [node name="ButtonLevel_8" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -105,3 +112,4 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 9"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/level_nine.tscn"

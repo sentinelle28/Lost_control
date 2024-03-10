@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://forgoctetyfe"]
+
+[ext_resource type="PackedScene" uid="uid://c2yjmn1xyta8e" path="res://level/true_tutoriel.tscn" id="1_0pqwl"]
+[ext_resource type="PackedScene" uid="uid://2ihbeflequcu" path="res://level/fourth_level/disparatus.tscn" id="2_8g5uu"]
+[ext_resource type="PackedScene" uid="uid://ctbdqjnkoplv5" path="res://level/fourth_level/level_tilemap_fourth.tscn" id="3_t42tg"]
+[ext_resource type="PackedScene" uid="uid://dhac6osen6bsm" path="res://level/third_level/progress_bar.tscn" id="4_pxfhh"]
+[ext_resource type="PackedScene" uid="uid://b0ob2gdd2lje3" path="res://level/third_level/level_tilemap.tscn" id="5_cuser"]
+[ext_resource type="AudioStream" uid="uid://1lqyai50xg60" path="res://asset/audio/gameplay/change_input.wav" id="6_a12ix"]
+
+[node name="sevent_level" instance=ExtResource("1_0pqwl")]
+
+[node name="door" parent="." index="1"]
+position = Vector2(1091, 260)
+current_level = 7
+level_to_unlock = 9
+
+[node name="first_tilemap" parent="level_tilemap" index="0"]
+layer_0/tile_data = PackedInt32Array(1114134, 65537, 0, 1179671, 65537, 0, 1245208, 65537, 0, 983059, 65537, 0, 983060, 65537, 0, 458770, 65537, 0, 458771, 65537, 0, 458772, 65537, 0)
+
+[node name="second_tilemap" parent="level_tilemap" index="1"]
+layer_0/tile_data = PackedInt32Array()
+
+[node name="first_background" parent="bakground" index="0"]
+layer_1/tile_data = PackedInt32Array(1245203, 0, 1, 1245205, 0, 1, 1245213, 0, 1, 1245217, 0, 1, 1245211, 0, 1, 720922, 0, 1, 786444, 0, 1, 786446, 0, 1, 393228, 0, 1, 393235, 0, 1, 393221, 0, 1, 720900, 0, 1)
+
+[node name="second_background" parent="bakground" index="1"]
+layer_0/tile_data = PackedInt32Array(589842, 196608, 0, 589846, 196608, 0, 589850, 196608, 0, 589858, 262144, 0, 589856, 131072, 0, 589853, 131072, 0, 327706, 131072, 0, 327684, 131072, 0)
+
+[node name="disparatus" parent="." index="4" node_paths=PackedStringArray("list") instance=ExtResource("2_8g5uu")]
+position = Vector2(259.157, 418.679)
+list = [NodePath("../level_tilemap/first_tilemap"), NodePath("../level_tilemap/second_tilemap"), NodePath("../level_tilemap2/first_tilemap"), NodePath("../level_tilemap2/second_tilemap"), NodePath("../level_tilemap3/first_tilemap"), NodePath("../level_tilemap3/second_tilemap")]
+
+[node name="level_tilemap2" parent="." index="5" instance=ExtResource("3_t42tg")]
+
+[node name="first_tilemap" parent="level_tilemap2" index="0"]
+layer_0/tile_data = PackedInt32Array(1310738, 65537, 0, 1310739, 65537, 0, 1310740, 65537, 0, 1310741, 65537, 0, 1310742, 65537, 0, 1310743, 65537, 0, 1310744, 65537, 0, 1310745, 65537, 0, 1310746, 65537, 0, 1310747, 65537, 0, 1310748, 65537, 0, 1310749, 65537, 0, 1310750, 65537, 0, 1310751, 65537, 0, 1310752, 65537, 0, 1310753, 65537, 0, 1310754, 65537, 0, 1310755, 65537, 0, 18, 65537, 0, 19, 65537, 0, 20, 65537, 0, 21, 65537, 0, 22, 65537, 0, 23, 65537, 0, 24, 65537, 0, 25, 65537, 0, 26, 65537, 0, 27, 65537, 0, 28, 65537, 0, 29, 65537, 0, 30, 65537, 0, 31, 65537, 0, 32, 65537, 0, 33, 65537, 0, 34, 65537, 0, 35, 65537, 0, 65571, 65537, 0, 131107, 65537, 0, 196643, 65537, 0, 262179, 65537, 0, 327715, 65537, 0, 393251, 65537, 0, 458787, 65537, 0, 524323, 65537, 0, 589859, 65537, 0, 655395, 65537, 0, 720931, 65537, 0, 786467, 65537, 0, 852003, 65537, 0, 917539, 65537, 0, 983075, 65537, 0, 1048611, 65537, 0, 1114147, 65537, 0, 1179683, 65537, 0, 1245219, 65537, 0, 1048596, 65537, 0, 1048597, 65537, 0, 786463, 65537, 0, 786464, 65537, 0, 786465, 65537, 0, 720928, 65537, 0, 720929, 65537, 0, 655394, 65537, 0, 720930, 65537, 0, 786466, 65537, 0, 655393, 65537, 0, 589858, 65537, 0, 589857, 65537, 0, 1048595, 65537, 0, 1048594, 65537, 0, 786458, 65537, 0, 786459, 65537, 0, 786460, 65537, 0, 786457, 65537, 0)
+
+[node name="ProgressBar" parent="." index="6" node_paths=PackedStringArray("timer", "audio") instance=ExtResource("4_pxfhh")]
+offset_left = 1002.0
+offset_top = 35.0
+offset_right = 1113.0
+offset_bottom = 62.0
+timer = NodePath("../Timer")
+audio = NodePath("../AudioStreamPlayer")
+
+[node name="level_tilemap3" parent="." index="7" instance=ExtResource("5_cuser")]
+
+[node name="first_tilemap" parent="level_tilemap3" index="0"]
+layer_0/tile_data = PackedInt32Array(1310720, 65537, 0, 1310721, 65537, 0, 1310722, 65537, 0, 1310723, 65537, 0, 1310724, 65537, 0, 1310725, 65537, 0, 1310726, 65537, 0, 1310727, 65537, 0, 1310728, 65537, 0, 1310729, 65537, 0, 1310730, 65537, 0, 1310731, 65537, 0, 1310732, 65537, 0, 1310733, 65537, 0, 1310734, 65537, 0, 1310735, 65537, 0, 1310736, 65537, 0, 1310737, 65537, 0, 0, 65537, 0, 65536, 65537, 0, 131072, 65537, 0, 196608, 65537, 0, 262144, 65537, 0, 327680, 65537, 0, 393216, 65537, 0, 458752, 65537, 0, 524288, 65537, 0, 589824, 65537, 0, 655360, 65537, 0, 720896, 65537, 0, 786432, 65537, 0, 851968, 65537, 0, 917504, 65537, 0, 983040, 65537, 0, 1048576, 65537, 0, 1114112, 65537, 0, 1179648, 65537, 0, 1245184, 65537, 0, 1, 65537, 0, 2, 65537, 0, 3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, 7, 65537, 0, 8, 65537, 0, 9, 65537, 0, 10, 65537, 0, 11, 65537, 0, 12, 65537, 0, 13, 65537, 0, 14, 65537, 0, 15, 65537, 0, 16, 65537, 0, 17, 65537, 0, 1245191, 65537, 0, 1179659, 65537, 0, 1245195, 65537, 0, 786438, 65537, 0, 786437, 65537, 0, 786436, 65537, 0, 786435, 65537, 0, 786434, 65537, 0, 786433, 65537, 0, 458757, 65537, 0, 1245189, 65537, 0, 1245190, 65537, 0, 1179656, 65537, 0, 1245192, 65537, 0, 1179657, 65537, 0, 1245193, 65537, 0, 1179658, 65537, 0, 1245194, 65537, 0, 1114128, 65537, 0, 1179664, 65537, 0, 1245200, 65537, 0, 1114129, 65537, 0, 1179665, 65537, 0, 1245201, 65537, 0, 851979, 65537, 0, 851980, 65537, 0, 851981, 65537, 0, 851982, 65537, 0, 851983, 65537, 0, 655361, 65537, 0, 720897, 65537, 0, 589825, 65537, 0, 458758, 65537, 0, 458763, 65537, 0, 458764, 65537, 0, 458765, 65537, 0, 458766, 65537, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("6_a12ix")
+
+[node name="Timer" type="Timer" parent="." index="9"]
+wait_time = 0.001
+
+[editable path="level_tilemap2"]
+[editable path="level_tilemap3"]
