@@ -82,3 +82,4 @@ func paused_button():
 		get_tree().current_scene.hide()
 		Pausedmenu.show()
 		get_tree().paused = true
+

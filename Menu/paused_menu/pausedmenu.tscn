@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://didhoqclmsan6"]
+[gd_scene load_steps=6 format=3 uid="uid://didhoqclmsan6"]
 
 [ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_3cqnk"]
 [ext_resource type="Script" path="res://Menu/paused_menu/pausedmenu.gd" id="1_4w5ur"]
@@ -8,10 +8,6 @@ default_font = ExtResource("1_3cqnk")
 default_font_size = 30
 
 [sub_resource type="Theme" id="Theme_oru8b"]
-default_font = ExtResource("1_3cqnk")
-default_font_size = 30
-
-[sub_resource type="Theme" id="Theme_44yxy"]
 default_font = ExtResource("1_3cqnk")
 default_font_size = 30
 
@@ -59,12 +55,6 @@ size_flags_vertical = 0
 theme = SubResource("Theme_oru8b")
 text = "Restart current level"
 
-[node name="option_button" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = SubResource("Theme_44yxy")
-text = "Settings"
-
 [node name="Goback_button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -73,5 +63,4 @@ text = "Go back to level selector menu"
 
 [connection signal="pressed" from="Panel/VBoxContainer/continue_button" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/reload_button" to="." method="_on_reload_button_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/option_button" to="." method="_on_option_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Goback_button" to="." method="_on_goback_button_pressed"]

@@ -14,5 +14,3 @@ offset_bottom = 18.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_fxpjr")
 script = ExtResource("2_wl4a0")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]

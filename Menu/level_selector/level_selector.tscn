@@ -105,6 +105,7 @@ size_flags_horizontal = 4
 theme = ExtResource("3_fl5y5")
 text = "Level 8"
 script = ExtResource("4_40etw")
+level_to_load = "res://level/heightlevel.tscn"
 
 [node name="ButtonLevel_9" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2

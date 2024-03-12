@@ -28,4 +28,4 @@ layer_1/tile_data = PackedInt32Array(1245194, 0, 1, 1245200, 0, 1, 1245205, 0, 1
 layer_0/tile_data = PackedInt32Array(589833, 131072, 0, 589840, 131072, 0, 589845, 131072, 0, 589851, 131072, 0, 589855, 131072, 0, 589838, 196608, 0, 589844, 196608, 0, 589850, 196608, 0, 589856, 196608, 0, 458772, 196608, 0, 393243, 196608, 0, 262153, 196608, 0, 327687, 196608, 0, 393219, 196608, 0, 524292, 262144, 0, 458758, 196608, 0)
 
 [node name="disparatus" parent="." index="5" node_paths=PackedStringArray("list") instance=ExtResource("3_4hnjv")]
-list = [null, null]
+list = [NodePath("../level_tilemap/first_tilemap"), NodePath("../level_tilemap/second_tilemap")]

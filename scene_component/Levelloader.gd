@@ -2,7 +2,8 @@ extends Button
 
 @export var level_to_load:String = "res://level/tutoriel.tscn"
 
-
+func _ready():
+	connect("pressed",_on_pressed)
 
 
 func _on_pressed():

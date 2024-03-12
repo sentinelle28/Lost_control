@@ -1,8 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5pt5847gpu3o"]
+[gd_scene load_steps=5 format=3 uid="uid://b5pt5847gpu3o"]
 
 [ext_resource type="FontFile" uid="uid://d2qsbiia2afr7" path="res://asset/visual/font/Boohong.otf" id="1_kjqh3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_me3wj"]
+font = ExtResource("1_kjqh3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1lgki"]
+font = ExtResource("1_kjqh3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2nyek"]
 font = ExtResource("1_kjqh3")
 
 [node name="CreditMenu" type="Control"]
@@ -33,11 +39,20 @@ offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VScrollBar" type="VScrollBar" parent="Panel/VBoxContainer"]
-layout_mode = 2
-
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Thanks to  Khurasan for the font"
 label_settings = SubResource("LabelSettings_me3wj")
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Everything else is made by me "
+label_settings = SubResource("LabelSettings_1lgki")
+
+[node name="Label3" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Using the godot game engine"
+label_settings = SubResource("LabelSettings_2nyek")
